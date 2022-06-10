@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>body {
+  font-family: sans-serif;
+  font-size: 16px;
+  
+}
+li.have-children ul li a.my-class{
+  background-color: hsl(204, 81%, 38%);
+}
+li.have-children ul li a.my-class:hover{
+  background-color: hsl(204, 81%, 38%);
+}
+ul.sidebar-menu {
+    margin: 0;
+    padding: 0;
+    max-width: 400px;
+    list-style: none;
+    list-style-type: none;
+}
+.sidebar-menu li a span {
+  margin-right: 20px;
+  color: #fff;
+}
+.sidebar-menu li a  {
+  background-color: hsl(204, 86%, 53%);
+  padding: 20px 25px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+.sidebar-menu li a:hover  {
+  background-color: hsl(204, 86%, 53%);
+  padding: 20px 25px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+li.have-children ul {
+  padding: 0px;
+} 
+li.have-children ul li a {
+  background-color: hsl(204deg 29% 36%);
+  padding-left: 62px;
+} 
+li.have-children ul li a:hover {
+  color: #fff;
+  background-color: hsl(204, 60%, 55%);
+  padding-left: 62px;
+} 
+li.have-children, li {
+  position: relative;
+}
+.have-children span::after {
+  position: absolute;
+  right: 30px;
+  content: "\f054";
+  color: #fff;
+  transition: all .5s;
+}
+li.active.have-children span::after {
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.sidebar-menu .have-children > ul {
+    display: none;
+}
+.select.disabled{
+    pointer-events: none;
+}</style>
+<script defer="defer" src="/js/chunk-vendors.e1e1e96f.js">
+</script>
+<script defer="defer" src="/js/app.2fb49d71.js">
+</script>
+</head>
+<body>
+  <div class="section" id="app">
+  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>$(document).ready(function(){
+          $(".sidebar-menu > li.have-children a").on("click", function(i){
+              i.preventDefault();
+          if( ! $(this).parent().hasClass("active") ){
+              // $(".sidebar-menu li ul").slideUp();
+              $(this).next().slideToggle();
+              $(".sidebar-menu li").removeClass("active");
+              $(this).parent().addClass("active");
+          }else{
+              $(this).next().slideToggle();
+              $(".sidebar-menu li").removeClass("active");
+              }
+          });
+          });</script>
+          </body>
+          </html>
